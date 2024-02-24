@@ -21,9 +21,14 @@ When we utilize this expression in our code it allows us to check against any us
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
-
+```md
+`/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
+```
 ### Anchors
+The characters in the above expression ``` ^ ``` and ``` $ ``` which come at the beginning and ending of the expression are what we would call Anchors. More specifically the ``` ^ ``` is our anchor that signifies the beginning of the string that matches a range of possible charaters that follow it. You can feed a literal string after the anchor, or as we do with regular expressions we feed it a series of parameters that help us open up the possibility for more correct answers than just one literal one. 
+The ``` $ ``` anchor is what signifies the end of the expression. So much like the beginning anchor it signifies the expression that proceeds it contains the string we are looking for.
 
+The text between these anchors fall under one of the following categories and further specify the types of characters or information that we are looking for when taking user input into account. 
 ### Quantifiers
 
 ### Grouping Constructs
