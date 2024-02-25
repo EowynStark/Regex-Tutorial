@@ -30,6 +30,12 @@ The ``` $ ``` anchor is what signifies the end of the expression. So much like t
 
 The text between these anchors fall under one of the following categories and further specify the types of characters or information that we are looking for when taking user input into account. 
 ### Quantifiers
+In this regular expression we have multiple quantifiers that help us specify how many times something may or may not occur. We will break this expression down by our grouping constructs, which is a topic we will discuss in more detail further on in this tutorial. 
+
+The ``` ? ``` you see in the beginning section ``` (https?:\/\/)? ``` sets a number of times you may or may not see ``` http:// ``` or ``` https:// ``` to be zero to one time. This could be expanded to mean that this particular protocol section is optional. 
+
+The ``` + ``` you see in the following section ``` ([\da-z\.-]+) ``` sets the number of times you may or may not see a set of characters indicated by the parameters listed inside the parentheses to be one or more times. This would be expanded to mean that there must be at least one character in the domain name that follows the optional protocol. 
+
 
 ### Grouping Constructs
 
