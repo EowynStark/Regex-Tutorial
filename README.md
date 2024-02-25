@@ -66,8 +66,28 @@ The remaining groups are all capturing information that we can access separately
 Understanding that each parentheses separates bits of information that we are looking for in this regular expression helps us better visualize how URLs work and can be manipulated within our established code.
 
 ### Bracket Expressions
+Within the regular expression that we have been working diligently to unravel, we see several groups of characters within brackets. These sections are broadly known as Bracket Expressions and within those we see something more specifically known as Character Classes. While these terms are used interchangeably they are still separate ideas. Not all Bracket Expressions are Character Classes while all Character Classes are contained within Bracket Expressions. 
+
+``` [\da-z\.-] ``` 
+
+``` [a-z\.] ```
+
+```[\/\w \.-] ```
+
+These brackets contain our specifications for what types of characters we are looking for when taking user input into account. We will delve further into what types of characters we are looking for when we discuss Character Classes later on. 
+
+Much like our Grouping Constructs, our brackets enclose the information that we are looking for and allow us to better manipulate what we are looking for. This lowers the variability from infinity to exactly the ranges or options that we feed into the brackets as defined by the character classes within them.
 
 ### Character Classes
+To expand upon the Bracket Expressions we can finally dissect each one and see what Character Classes do within our regular expression. 
+
+``` [\da-z\.-] ``` This class is looking for multiple things and we can break this expression down further into its pieces. ``` \d ``` looks for any digit. ``` a-z\ ``` looks for a lowercase letter from "a" to "z". ``` . ``` looks for exactly what it looks like, a literal dot or period. ``` - ``` looks for exactly what it looks like as well, a literal hyphen. With this particular expression we see that we are looking for at least one of the following: digits, letters "a" through "z", ".", and or "-" but not limited to one of these. 
+
+``` [a-z\.] ``` This class is looking for two potential characters. ``` a-z\ ``` specifies that we are looking for lower cased letters from "a" to "z". ``` . ``` specifies that we are looking for a literal dot or period. All together in this expression we are looking for a range of two to six of the following: letters "a" through "z" and or "." but limited to two through six of them as previously explored within our Quantifiers section. 
+
+```[\/\w \.-] ``` This class is looking for multiple things and we can break it down further as well. ``` \/ ``` specifies that we are looking for a forward slash "/". ``` \w ``` specifies that we are looking for any word. It may be hard to notice it but there is a ```  ``` that follows that specifies we are looking for a space between characters. And again ``` . ``` and ``` - ``` specifies that we are looking for either a dot/period or a hyphen. When we take this into account we can see that we are looking for zero or multiple of the following: "/", words, "." and or "-" to create the path portion of this regular expression. 
+
+So to summarize what we have just explored, Character Classes work within a Bracket Expression along with any additional Quantifiers to create the parameters that we are looking for within our particular regular expression. 
 
 ### The OR Operator
 
