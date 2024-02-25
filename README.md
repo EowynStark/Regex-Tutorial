@@ -51,9 +51,19 @@ For the regular expression that we have been working to unravel, there are mutip
 
 In the above section while working to understand the quantifying parameters of our regular expression we were utilizing the grouping built in to help us stay organized on what information was being limited and where. This is the essential purpose of grouping constructs. 
 
-The first group ``` (https?:\/\/) ``` contains a modifier of ``` ? ``` that indicates here that it is a non-capturing section. What that essentiall means is that the protocol does not become part of the URL data that we are actively using or manipulating but it does help to separate that particular bit of information from the sections that follow. 
+The first group ``` (https?:\/\/) ``` contains a modifier of ``` ? ``` that indicates here that it is a non-capturing section. What that essentially means is that the protocol does not become part of the URL data that we are actively using or manipulating but it does help to separate that particular bit of information from the sections that follow. 
 
+The remaining groups are all capturing information that we can access separately in the case that we would need to or want to further analyze or process the input data. 
 
+``` ([\da-z\.-]+) ``` Captures the domain name (such as www.website)
+
+``` ([a-z\.]{2,6}) ``` Captures the top-level domain name (such as .com)
+
+``` ([\/\w \.-]*) ``` Captures the entire path (such as /innerPage/evenDeeperPage)
+
+``` [\/\w \.-] ``` Captures a single path within the entire pathway (such as /innerPage out of /innerPage/evenDeeperPage or even more lengthy paths)
+
+Understanding that each parentheses separates bits of information that we are looking for in this regular expression helps us better visualize how URLs work and can be manipulated within our established code.
 
 ### Bracket Expressions
 
