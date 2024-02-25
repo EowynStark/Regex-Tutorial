@@ -1,5 +1,5 @@
 # Regex-Tutorial
-A tutorial explaining how to understand a regular expression built to match a url 
+A tutorial explaining how to understand a regular expression built to match a url to user input
 
 ## Summary
 
@@ -90,7 +90,11 @@ To expand upon the Bracket Expressions we can finally dissect each one and see w
 So to summarize what we have just explored, Character Classes work within a Bracket Expression along with any additional Quantifiers to create the parameters that we are looking for within our particular regular expression. 
 
 ### The OR Operator
+Within regular expressions there are times where we would like to allow for alternatives when attempting to match against a user's input. Predominantly you would see them written explicitly as a ``` | ``` but as you can notice with our particular expression there are none of those. While we do not appear to have any Or Operators with the absence of that character, there are two implicit Or Operators hidden within. As we discuss these two hidden Or Operators we will see why including alternatives may be quite useful when utilizing a regular expression. 
 
+In the ``` (https?:\/\/)? ``` section the ending "?" acts as an Or Operator as well as a Quantifier to specify that we are looking for http:// OR https:// either zero to one times. The reason this is an implicit Or Operator lies in the use of the quantifier itself behaving as an optional parameter. 
+
+In the 
 ### Flags
 
 ### Character Escapes
