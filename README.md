@@ -47,6 +47,13 @@ The ``` ? ``` you see in the last section ``` \/? ``` sets a range of times you 
 When we take all of these quantifiers together we can see that within each grouping construct we have variable characters that are both optional and not optional specified by the particular quantifying characters utilized. This makes for a dynamic regular expression that is better able to adapt to user input when dealing with the URL of our oftentimes complex websites. 
 
 ### Grouping Constructs
+For the regular expression that we have been working to unravel, there are mutiple sections hidden within that are called Grouping Constructs. Each one of these can be utilized to capture different parts of a URL as they are being written. Some of them actively capture the information that is input whereas others do not separate that information as stringently from the rest of the information around it.
+
+In the above section while working to understand the quantifying parameters of our regular expression we were utilizing the grouping built in to help us stay organized on what information was being limited and where. This is the essential purpose of grouping constructs. 
+
+The first group ``` (https?:\/\/) ``` contains a modifier of ``` ? ``` that indicates here that it is a non-capturing section. What that essentiall means is that the protocol does not become part of the URL data that we are actively using or manipulating but it does help to separate that particular bit of information from the sections that follow. 
+
+
 
 ### Bracket Expressions
 
