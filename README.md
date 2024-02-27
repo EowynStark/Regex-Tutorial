@@ -106,7 +106,15 @@ For example if at the end of the expression ``` `/^(https?:\/\/)?([\da-z\.-]+)\.
 In our particular example of a regular expression we do not have a Flag included to strictly specify how exactly we are trying to limit the results of the search against our intended user input. 
 
 ### Character Escapes
+Character Escapes are routinely used in order to help us utilize characters that can have multiple uses in the code as well as in our regular expression specifically. We wouldn't want the expression to confuse metacharacters with parameters for characters we are actually attempting to include. We will explore which characters have escapes in order for the expression to read them as the characters as opposed to characters included for syntax and pattern purposes. 
+
+```\d``` represents any digit 0-9 as we discussed previously in the character class section. When combined in the entire class ```[\da-z\.-]``` it helps the class identify that we are looking for digits.
+
+```\w``` represents any word character as previously mentioned in the character class section. Because it is included in the whole class ```[\/\w \.-]``` the expression recognizes that we are looking for characters that appear in any ASCII alphanumeric phrase including underscores but not including spaces. Which helps us understand then why there is a space after that character escape to help us then include spaces in that particular section of this expression. 
+
+```\.``` represents a literal dot or period as previously explained in the character class section. In the character class sections that include this particular escape it helps us include the "." that you can often find in URL patterns without having the expression itself confuse the "." for an operational character that could mean something else.
+
+What all of these escapes share is the inclusion of a ```\``` before the character which acts as a flag within the expression to denote that the character that follows behaves differently than had it not come immediately after a "\". 
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
