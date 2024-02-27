@@ -117,4 +117,6 @@ Character Escapes are routinely used in order to help us utilize characters that
 What all of these escapes share is the inclusion of a ```\``` before the character which acts as a flag within the expression to denote that the character that follows behaves differently than had it not come immediately after a "\". 
 
 ## Author
+The author of this tutorial explaining the components of a URL matching regular expression is Andria Jean. 
 
+You can find more examples of her work listed on her GitHub profile linked <a href=https://github.com/EowynStark> here</a>.
