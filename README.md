@@ -101,7 +101,7 @@ Essentially in this entire regular expression most of the Or Operators are servi
 ### Flags
 Regular expressions can sometimes include characters called Flags that indicate we are looking for user input in a particular way and using these characters modifies the pattern we use to look within our given input. 
 
-For example if at the end of the expression ``` `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` ``` we saw a ``` g ``` tacked onto the end after the closing ``` / ``` that would indicate that we are looking for a global match. This would limit the results to be ones that matches all occurrences within the string as opposed to matching the first one.  
+For example if at the end of the expression ``` `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` ``` we saw a ``` g ``` tacked onto the end after the closing ``` / ``` that would indicate that we are looking for a global match. This would limit the results to be ones that match all occurrences within the string as opposed to matching the first one.  
 
 In our particular example of a regular expression we do not have a Flag included to strictly specify how exactly we are trying to limit the results of the search against our intended user input. 
 
