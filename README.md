@@ -94,8 +94,16 @@ Within regular expressions there are times where we would like to allow for alte
 
 In the ``` (https?:\/\/)? ``` section the ending "?" acts as an Or Operator as well as a Quantifier to specify that we are looking for http:// OR https:// either zero to one times. The reason this is an implicit Or Operator lies in the use of the quantifier itself behaving as an optional parameter. 
 
-In the 
+In the ``` [a-z\.] ``` section the "." acts as an Or Operator in much the same manner as the "?" from the previous example. It indicates implicitly that any lower cases letter or dot/period will be accepted for that particular set of parameters. 
+
+Essentially in this entire regular expression most of the Or Operators are serving a dual purpose because they function more primarily as a Quantifier or as a Character Class to give us non-specifically what we are looking for. 
+
 ### Flags
+Regular expressions can sometimes include characters called Flags that indicate we are looking for user input in a particular way and using these characters modifies the pattern we use to look within our given input. 
+
+For example if at the end of the expression ``` `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` ``` we saw a ``` g ``` tacked onto the end after the closing ``` / ``` that would indicate that we are looking for a global match. This would limit the results to be ones that matches all occurrences within the string as opposed to matching the first one.  
+
+In our particular example of a regular expression we do not have a Flag included to strictly specify how exactly we are trying to limit the results of the search against our intended user input. 
 
 ### Character Escapes
 
